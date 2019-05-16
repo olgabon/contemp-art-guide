@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>List of Events</h1> <br>
+<div class="row">
+
+{{#each events}}
+    <div class="card" style="width: 18rem;">
+      <img src="{{eventImage}}" class="card-img-top" alt="..." style="height: 30vh">
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">{{location}}</p>
+        <a href="/details/{{_id}}" class="btn btn-primary">Details</a>
+        <a href="/delete?id={{_id}}" class="card-link"> Delete</a>
+      </div>
+    </div>
+{{/each}}
+</div>
+</div>
