@@ -1,7 +1,7 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
+  "description": "art everywhere",
   "main": "app.js",
   "dependencies": {
     "bcrypt": "^3.0.6",
@@ -21,5 +21,8 @@
     "start": "node app.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "url": "happy now?"
+  }
 }
