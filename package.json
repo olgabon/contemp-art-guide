@@ -27,6 +27,7 @@
     "express-session": "^1.16.1",
     "hbs": "^4.0.4",
     "moment": "^2.24.0",
-    "mongoose": "^5.5.9"
+    "mongoose": "^5.5.9",
+    "node-pre-gyp": "^0.13.0"
   }
 }
