@@ -1,19 +1,27 @@
+<div class="jumbotron jumbotron-fluid jumbotron-details">
 <div class="container">
-    <div class="card mb-3" style="">
+    <div class="card mb-3 details-card" style="">
   <div class="row no-gutters">
     <div class="col-md-4">
       <img src="{{eventImage}}" class="card-img" alt="...">
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
+      <div class="card-body details-card-body">
+        
         <h5 class="card-title">{{name}}</h5>
         <p class="card-text">{{description}}</p>
-        <i class="fas fa-map-marker-alt"></i><p class="card-text">{{location}}</p>
-        <a href="{{downloadURL}}">web</a>
-        <p>Price: {{ticketPrice}} €</p>
-        <i class="far fa-heart"></i> <a href="#"> Save as favourite</a>
+        <div class="info-museum-float">
+         <p class="card-text">From: <span class="date-span">{{start}}</span></p>
+          <p class="card-text">To: <span class="date-span">{{end}}</span></p>
+             <p>Ticket price: <span class="date-span">{{ticketPrice}} €</span></p>
+        </div>
+        <div class="float-container">
+          <p class="card-text">City: <span class="date-span">{{city}} </span></span></p>
+        <i class="fas fa-map-marker-alt">  </i><a target="_blank" href="{{downloadURL}}" class="location-btn">  {{location}}</a> <br>
+        <div class="fav-events"><a href="/addToFavourite?eventId={{_id}}" class="location-btn"> <i class="fas fa-heart"></i>  Save as favourite</a></div>
+      </div>
       </div>
     </div>
-  </div>
 </div>
 </div>
+</div>
+

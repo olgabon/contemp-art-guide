@@ -20,7 +20,7 @@ app.post("/login", (req, res)=> {
                         res.redirect("/")
                     }
                     else {
-                        res.send("Invalid credentials")
+                        res.redirect("loginTryAgain")
                     }
                 })
             } else {
@@ -33,13 +33,16 @@ app.post("/login", (req, res)=> {
         })
 })
 
-app.get("/user/logout", (req, res)=> {
+app.get("/logout", (req, res)=> {
     // res.clearCookie("loggedIn")
     req.session.destroy((err)=> {
         if(err) res.redirect("/")
         else res.redirect("/")
     })
-   
+})
+
+app.get("/loginTryAgain", (req, res)=> {
+    res.render("user/loginTryAgain")
 })
 
 module.exports = app

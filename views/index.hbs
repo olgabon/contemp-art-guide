@@ -1,15 +1,29 @@
-<div class="container">
-    <h1>List of Events</h1> <br>
+<div class="jumbotron jumbotron-home">
+  <div class="container jumb-container">
+  <h1 class="display-4 jum-h1">Your Contemporary Art Guide</h1>
+  <p class="lead">This Art Guide connects people to art, offers talented young artists a platform and enables Dutch contemporary art scene to excel at an international level.</p>
+  <hr class="my-4">  
+    <form action="/" method="get">
+    <div class="input-group mb-3 search-container search-input">
+  <input type="text" class="form-control" name="search" placeholder="Find exhibition in your city..." aria-label="Recipient's username" aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary search-btn" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container events-list-container">
+    <h1>Find your exhibition</h1> <br>
 <div class="row">
 
 {{#each events}}
-    <div class="card" style="width: 18rem;">
+    <div class="event-card" >
       <img src="{{eventImage}}" class="card-img-top" alt="..." style="height: 30vh">
-      <div class="card-body">
+      <div class="card-body event-card-body">
         <h5 class="card-title">{{name}}</h5>
-        <p class="card-text">{{location}}</p>
-        <a href="/details/{{_id}}" class="btn btn-primary">Details</a>
-        <a href="/delete?id={{_id}}" class="card-link"> Delete</a>
+        <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{location}}</p>
+        <a class="btn-primary btn-outline-light btn-info" href="/details/{{_id}}" >More information</a> 
       </div>
     </div>
 {{/each}}

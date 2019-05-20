@@ -7,6 +7,13 @@ const bcrypt = require('bcrypt');
 app.get("/signup", (req, res)=> {
     res.render("user/signup")
 })
+app.get("/userExists", (req, res)=> {
+    res.render("user/userExists")
+})
+
+app.get("/signUpRedirect", (req, res)=> {
+    res.render("user/signUpRedirect")
+})
 
 app.post("/signup", (req, res)=> {
     let newUser = {
@@ -16,17 +23,15 @@ app.post("/signup", (req, res)=> {
     User.find({username: req.body.username})
         .then((user)=> {
             if(user.length > 0) {
-                res.send("User name already exists")
+                res.redirect("/userExists")
             } else {
                 bcrypt.hash(req.body.password, 10, function(err, hash) {
-                    // Store hash in your password DB.
-                    debugger
                     if(err) throw new Error("hashing error")
                     else {
                         newUser.password = hash
                         User.create(newUser)
                         .then((user)=> {
-                            res.redirect('/')
+                            res.redirect('signUpRedirect')
                         })
                         .catch((err)=> {
                             res.status(500).send("An error occured")
@@ -37,7 +42,7 @@ app.post("/signup", (req, res)=> {
         })
         .catch((err)=> {
             res.status(500).send("An error occured")
-        })
+    })
 
 })
 

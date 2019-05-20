@@ -3,16 +3,13 @@ const app = express()
 const Events = require("../../models/createEvent")
 
 app.get('/details/:id', (req, res) => {
-    debugger
     Events.findOne({_id:req.params.id})
     .then(event => {
-        console.log(event.downloadURL)
-        debugger
-    res.render('events/details', {eventURL: event.downloadURL});
+    res.render('events/details', event);
     })
     .catch((err) => {
         console.log(err);
-        res.render('err');
+        res.send('err');
     })
 })
 

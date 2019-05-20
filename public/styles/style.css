@@ -1,0 +1,225 @@
+.body{
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav {
+    height: 60px;
+    text-transform: uppercase;
+    transition: color .2s linear;
+}
+.nav_link {
+color: black;
+font-weight: bold;
+padding-top: 20px;
+}
+.nav_link:hover {
+    color: #bf631f;
+}
+.jum-h1 {
+    font-family: 'ABeeZee', sans-serif;
+}
+.search-container {
+    width: 40vw;
+}
+.search-btn{
+    color: white;
+    border: 1px solid white;
+}
+.search-btn:hover{
+    background-color: #bf631f;
+    border: 1px solid #bf631f;
+}
+.nav ul {
+    padding-left: 0;
+}
+.nav a{
+    padding-left: 0; 
+    padding-right: 20px; 
+}
+.nav-container {
+    padding: 0;
+}
+.jumbotron-home{
+ background-image: url(https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?cs=srgb&dl=blur-blurry-close-up-347139.jpg&fm=jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ 
+}
+.jumb-container {
+    padding: 3% 0;
+  }
+.lead {
+width: 70%;
+}
+.search-input input{
+    opacity: 0.7;
+    border: 1px solid white;
+}
+.events-list-container h1{
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 40px;
+}
+.events-list-container {
+    padding-left: 0; 
+}
+.event-card{
+    width: 33.3%;
+    padding: 0 5px;
+}
+.event-card img{
+    border-radius: 10px;
+    height: 16rem !important;
+}
+.event-card-body{
+    padding: 30px 12px;
+    margin-bottom: 40px;
+}
+.event-card-body h5 {
+    font-weight: bolder;
+    font-size: 16px;
+    color: #2b1607;
+    margin-top: 5px;
+}
+.event-card-body p {
+    color: #d4a07b;
+    margin-bottom: 5px;
+}
+.btn-info{
+    text-transform: uppercase;
+    font-weight: bolder;
+    background: white;
+    color:#92430a;
+    padding-left: 0;
+    font-size: 18px;
+}
+.btn-info:hover{
+    text-transform: uppercase;
+    color:#291202;
+    background: white;
+    padding-left: 0;
+    border: 0px solid white;
+}
+.btn-info:active{
+    text-transform: uppercase;
+    color:#291202 !important; 
+    background: white !important;
+    padding-left: 0; 
+}
+.fa-map-marker-alt {
+    padding-right: 5px;
+}
+.jumbotron-details{
+background-image: url(https://images.pexels.com/photos/544917/pexels-photo-544917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.container {
+    padding: 0;
+}
+.details-card {
+    padding: 50px;
+    background-color: #f1ece8;
+}
+.details-card img{
+    height: 16rem;
+    margin-top: 25px;
+}
+.details-card-body{
+    padding-left: 60px;
+    width: 30vw;
+}
+.details-card-body h5{
+    font-weight: bolder;
+    font-size: 24px;
+    color: #2b1607;
+    width: 70%;
+}
+.details-card-body p{
+font-size: 16px;
+}
+.date-span {
+    color: #92430a;
+}
+.float-container {
+    float: right;
+    width: 60%;
+}
+.info-museum-float{
+    float: left;
+    width: 30%;
+}
+.location-btn {
+    color: #92430a;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.location-btn:hover {
+    color: #92430a;
+    font-weight: bolder;
+}
+.float-container i{
+    color: #92430a;
+}
+.fav-events{
+    padding-top: 16px;
+}
+.container-signup{
+    width: 50%;
+    padding: 3rem 6rem;
+}
+.container-signup label{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.signup-btn{
+color: #92430a;
+background-color: white;
+border: 1px solid #92430a;
+font-weight: bolder;
+text-transform: uppercase;
+}
+.signup-btn:hover{
+    color: white;
+    background-color: #92430a;
+    border: 1px solid #92430a;
+}
+.form-group input{
+    border: 1px solid #92430a;
+    background-color: #ffffff;
+}
+.container-signup h3{
+    font-weight: bolder;
+    padding-bottom: 30px;
+}
+.events-list-container h1{
+    margin: 20px 0;
+    font-weight: bolder;
+}
+.container-create-event {
+    width: 60%;
+}
+.container-create-event label {
+    padding-top: 14px;
+    font-weight: bolder;
+}
+.container-create-event h2{
+    margin: 20px 0;
+    font-weight: bolder;
+}
+.create-event-btn {
+    margin-top: 40px;
+}
+.form-control:focus {
+    border-color: #92430a;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    background-color: #f7e9e0;
+}
+.form-group:active{
+    border-color: #92430a;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    background-color: #f7e9e0;
+}
+.nav-logs {
+    margin-left: 20rem;
+}

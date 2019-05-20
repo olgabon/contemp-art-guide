@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
@@ -10,8 +11,8 @@ const saltRounds = 10;
 const cookieParser = require('cookie-parser')
 
 app.use(session({
-    secret: "basic-auth-secret",
-    cookie: { maxAge: 60000 },
+    secret: process.env.Cookie_secret,
+    cookie: { maxAge: 600000 },
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
       ttl: 24 * 60 * 60 // 1 day
@@ -27,8 +28,7 @@ app.use(express.static(__dirname + '/public/'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-
-mongoose.connect('mongodb://localhost/events', {useNewUrlParser: true}, (err)=> {
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true}, (err)=> {
     if(!err)console.log("connected")
     else console.log("ERROR ERROR ERROR", err)
 })
@@ -39,15 +39,16 @@ app.use("/", attachUserInfo, require("./routes/events/createEvent"))
 app.use("/", attachUserInfo, require("./routes/events/details"))
 app.use("/", attachUserInfo, require("./routes/user/login"))
 app.use("/", attachUserInfo, require("./routes/user/signup"))
-
+app.use("/", attachUserInfo, require("./routes/favourite/favouriteList"))
+app.use("/", attachUserInfo, require("./routes/addToFavourite"));
 
 function attachUserInfo(req, res, next) {
     res.locals.currentUser = req.session.currentUser
     next()
-  }
+}
 
 
 
-app.listen(3000, ()=> {
+app.listen(process.env.PORT, ()=> {
     console.log("Listening!!!!!")
 })
