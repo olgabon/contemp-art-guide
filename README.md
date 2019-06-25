@@ -1,5 +1,5 @@
 # Contemporary Art Guide
-Contemporary Art Guide is an application that allows you to search for the current exhibition in your city and create new exhibition or events around you.
+Contemporary Art Guide is an application that allows to search for the current exhibition in your city and create new exhibition or events around you.
 ## Installation
 Go to http://localhost:3000/ or https://contempartguide.herokuapp.com (deployed version) to open the app.
 ## Introduction
@@ -21,7 +21,7 @@ Go to http://localhost:3000/ or https://contempartguide.herokuapp.com (deployed 
   
   **Details**: details about every exhibition. 
   
-# Instructions
+## Instructions
   
 When user goes to the main page, he is able to sign up, log in or check the current exhibitions. 
 
