@@ -21,7 +21,7 @@ Go to http://localhost:3000/ or https://contempartguide.herokuapp.com (deployed 
   
   **Details**: details about every exhibition. 
   
-#Instructions
+# Instructions
   
 When user goes to the main page, he is able to sign up, log in or check the current exhibitions. 
 
